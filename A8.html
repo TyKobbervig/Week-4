@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #message {
+            font-size: 24px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Game Recommendation Finder</h1>
+    <button onclick="loadGames()">Find Games</button>
+
+    <p id="message"></p>
+
+    <script>
+        function loadGames() {
+            document.getElementById("message").textContent = "Loading recommendations...";
+
+            setTimeout(function() {
+                document.getElementById("message").textContent =
+                    "Recommended Games: Elden Ring, Baldur's Gate 3, Cyberpunk 2077";
+            }, 3000); // wait 3 seconds
+        }
+    </script>
+
+</body>
+</html>
